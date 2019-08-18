@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge, chrome=1'>
+        <title>Aula 09 - Introdução ao DOM</title>
+        <style>
+            body{
+                background-color: rgb(89, 75, 212);
+                color: white;
+                font: normal 18pt Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="titulo">Introdução ao DOM (Document Object Model)</h1>
+        <p name='primeiro_paragrafo'>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+        <div id="msg">Clique em mim</div>
+        <script>
+            var corpo = document.body
+            corpo.style.background = 'black' // alterando a cor de fundo do body
+            var p1 = document.getElementsByTagName('p')[1] //indice: pegando o segundo paragrafo
+            p1.style.color = 'blue' // alterando a cor do primeiro paragrafo
+            window.document.write('No primeiro parágrafo está escrito: '+p1.innerText) //reescrevendo o paragrafo
+            // o innerText pega o resultado sem a formatação. o DOM por exemplo está em negrito. Para pegar a formatação basta usar o innerHTML
+            //window.document.write(window.navigator.appName) // Nome do Navegador
+            //window.document.write(window.document.URL)  // URL do site
+            
+            //var doc = window.document.getElementById('msg') //pegando o elemento por ID
+            //doc.style.background = 'green' //alterando a cor de fundo da tag div pelo id
+            //doc.innerText = 'Alterei o conteudo da tag div'
+
+            //var nome = document.getElementsByName('primeiro_paragrafo')[0]
+            //nome.innerText ='Alterando o primeiro paragrafo.'
+
+            //var titulo = window.document.getElementsByClassName('titulo')[0]
+            //titulo.innerHTML = '<u>Introdução ao DOM</u>' //alterando o titulo (h1) da pagina
+            
+            var seletor = window.document.querySelector('div#msg') //pegando o conteudo da div via css
+            seletor.innerText = 'Clique <aqui>' // alterando o conteudo da div
+            seletor.style.color = 'yellow' //alterando a cor do conteudo da div
+        
+        
+        </script>
+    </body>
+<!--Anotações
+DOM: Modelo de Objetos para Documentos.
+É um conjunto de objetos dentro do navegador que da acesso aos componentes internos do site.
+O DOM só está presente dentro do navegador.
+A árvore DOM começa da raíz (window).
+Tudo dentro do JS está dentro do objeto window.
+Dentro do window há vários objetos, como por exemplo, location, document e history.
+location: diz a localização do site (url, pagina atual, pagina anterior, etc)
+document: documento (página)atual
+history: guarda o histório (de onde veio, para onde vai, facilitando a navegação).
+Dentro de document há o objeto "html".
+Dentro de html há dois objetos: head e body.
+html é parent (pai/mãe) de body e head (e estes são childs/filhos de html)
+Dentro de head há alguns objetos como title e meta por exemplo.
+
+Métodos de Acesso ao Elemento:
+ - por Marca / tag
+   - getElementsByTagName()
+ - por ID
+   - getElementById()
+ - por Nome
+   - getElementsByName()
+ - por Classe
+   - getElementsByClassName()
+ - por Seletor / css
+   - querySelector() # para id e . para classe
+   - querySelectorAll()
+-->
+</html>
