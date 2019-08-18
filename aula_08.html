@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anotações</title>
+</head>
+<body>
+    <strong>Operadores:</strong>
+    <ul>
+        <li>Aritméticos</li>
+        <li>Atribuição</li>
+        <li><strong>Relacionais</strong></li>
+        <li><strong>Lógicos</strong></li>
+        <li><strong>Ternário</strong></li>
+    </ul>
+
+    <strong>Relacionais</strong>
+    <ul>
+        <li><strong>></strong>   Maior</li>
+        <li><strong><</strong>   Menor</li>
+        <li><strong>>=</strong>   Maior ou Igual</li>
+        <li><strong><=</strong>   Menor ou Igual</li>
+        <li><strong>==</strong>   Igual (Resto da divisão)</li>
+        <li><strong>!=</strong>   Diferente</li>
+    </ul>
+
+    <p>Os resultados utilizando operadores relacionais serão sempre um booleano</p>
+    <ul>
+        <li>5 > 2 .. <strong>true</strong></li>
+        <li>7 < 4 .. <strong>false</strong></4></li>
+        <li>8 >= 8 .. <strong>true</strong></li>
+        <li>9 <= 7 .. <strong>false</strong></li>
+        <li>5 == 5 .. <strong>true</strong></li>
+        <li>4 != 4 .. <strong>false</strong></li>
+    </ul>
+
+    <strong>Identidade (comparando 5 <i>Number</i> com '5' <i>String</i>):</strong>
+    <ul>        
+        <li>5 == 5 .. <strong>true</strong></li>
+        <li>5 == '5' .. <strong>true</strong></li>
+        <i>Neste caso o JS analiza se os valores são o mesmo (não o tipo).</i>
+    </ul>
+    <ul>
+            <li>5 === 5 .. <strong>true</strong></li>
+        <li>5 === '5' .. <strong>false</strong></li>
+        <i>Neste caso o JS analiza se os valores <strong>E</strong> se os tipos são os mesmos.</i>
+    </ul>
+    <ul>
+        <li>5 != '5' .. <strong>false</strong></li>
+        <li>5 !== '5' .. <strong>true</strong></li>
+        <i>O segundo caso é chamado de <strong>Desigual Restrito</strong>. Pois os <strong>tipos</strong> são diferentes mas os <strong>valores</strong> são os mesmos.</i>
+    </ul>
+    
+    <strong>Lógicos</strong>
+    <ul>
+        <li>! (negação/não)</li>
+            <ul>
+                <li>!true = false</li>
+                <li>!false = true</li>
+            </ul>
+        <li>&& (conjunção/e)</li>
+            <ul>
+                <li>true <strong>&&</strong> true .. <strong>true</strong> </li>
+                <li>true <strong>&&</strong> false .. <strong>false</strong> </li>
+                <li>false <strong>&&</strong>true .. <strong>false</strong> </li>
+                <li>false <strong>&&</strong>false .. <strong>false</strong> </li>
+            </ul>
+        <li>|| (disjunção/ou)</li>
+            <ul>
+                <li>true <strong>||</strong> true .. <strong>true</strong> </li>
+                <li>true <strong>||</strong> false .. <strong>true</strong> </li>
+                <li>false <strong>||</strong>true .. <strong>true</strong> </li>
+                <li>false <strong>||</strong>false .. <strong>false</strong> </li>
+            </ul>
+    </ul>
+    <strong>Ordem de Precedência: Aritméticos, Relacionais, Lógicos</strong>
+    <ul>
+        <li>5 > 8 <strong>&&</strong> 8 % 2 == 0</li>
+        <li>(5 > 8) <strong>&&</strong> ( (8 % 2)  == 0)</li>
+        <li>(5 > 8) <strong>&&</strong> (( 0 ) == 0)</li>
+        <li>false <strong>&&</strong> true</li>
+        <li><strong>false</strong></li>
+    </ul>
+    <ul>
+        <li>5 <= 8 <strong>||</strong> 8 / 2 ==2 </li>
+        <li>(5 <= 8) <strong>||</strong> ( (8 / 2)  == 0)</li>
+        <li>(5 <= 8) <strong>||</strong> (( 4 ) == 0)</li>
+        <li>true <strong>||</strong> false</li>
+        <li><strong>true</strong></li>
+    A ordem de Precedência será sempre: <i><strong>!, &&, ||</strong></i>
+    </ul>
+    
+
+    <strong>Ordem de Precedência "Geral"</strong>
+    <ul>
+        <li>Aritméticos: <strong> (), **, /, * , % </strong></li>
+        <li>Relacionais: <strong> >, <, >=, <=, ==, != </strong></li>
+        <li>Lógicos: <strong>!, &&, ||</strong></li>
+    </ul>
+     
+    <strong>Operador Ternário</strong>
+    <ul>
+        <li> ? e :</li>
+        <li> teste lógico <strong> ? </strong> true <strong> : </strong> false </li>
+        <li> média > = 7 <strong> ? </strong> 'Aprovado' <strong> : </strong> 'Reprovado' </li>
+        <code>
+            var idade = 25</br>
+            var resp = idade >= 18 ? 'Maior' : 'Menor'</br>
+            > resp</br>
+            >'Maior'
+        </code>
+    </ul>
+</body>
+</html>
