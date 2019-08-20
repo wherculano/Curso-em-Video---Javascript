@@ -1,0 +1,35 @@
+<!--Refazer o exercicio 11_2 como uma pagina HTML-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+    <style>
+        input{
+            background-color:#d1d1d169;
+        }
+    </style>
+</head>
+<body>
+   País que nasceu: <input type="text" name="pais" id="pais">
+   <input type="submit" value="Enviar" onclick="nacionalidade()">
+    <div id="res">
+
+    </div>
+   <script>
+       function nacionalidade(){
+           var nac = window.document.querySelector('input#pais')
+           var res = window.document.querySelector('div#res')
+           //transforma a string em uma palavra com a primeira letra maiuscula e o restante minuscula
+           var pais = nac.value.charAt(0).toUpperCase()+nac.value.slice(1).toLowerCase()
+           if (pais == 'Brasil'){
+                res.innerHTML = '<p>Você é <strong>brasileiro</strong></p>'
+           }else{
+               res.innerHTML = '<p>Você é <strong>estrangeiro</strong></p>'
+           }
+       }
+   </script>
+</body>
+</html>
