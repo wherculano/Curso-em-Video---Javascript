@@ -3,3 +3,4 @@ function soma(n1=0, n2=0){
 }
 
 console.log(`O valor da soma é ${soma(7,3)}`)
+console.log(`O valor da soma é ${soma(5)}`)
